@@ -2,17 +2,3 @@
 ###
 GET {{host}}/tts?Text=悦娃，早上好
 ###
-curl https://api.openai.com/v1/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer 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" \
-  -d '{
-  "model": "text-ada-001",
-  "prompt": "hello",
-  "temperature": 0.9,
-  "max_tokens": 150,
-  "top_p": 1,
-  "frequency_penalty": 0,
-  "presence_penalty": 0.6,
-  "stop": [" Human:", " AI:"],
-  "stream": true
-}' -v

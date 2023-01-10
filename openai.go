@@ -44,6 +44,7 @@ func OpenAIRequest(ctx context.Context, p OpenAIParams) (io.Reader, error) {
 		} `json:""choices`
 	}
 	reader, writer := io.Pipe()
+	fmt.Println()
 	go func() {
 		for {
 			event, err := dec.Decode()
@@ -58,6 +59,7 @@ func OpenAIRequest(ctx context.Context, p OpenAIParams) (io.Reader, error) {
 			json.Unmarshal([]byte(event.GetData()), e)
 
 			for _, c := range e.Choices {
+				fmt.Print(c.Text)
 				writer.Write([]byte(c.Text))
 			}
 		}
