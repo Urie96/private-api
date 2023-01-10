@@ -1,0 +1,3 @@
+@host=http://home.lubui.com:8020
+###
+GET {{host}}/tts?Text=悦娃，早上好

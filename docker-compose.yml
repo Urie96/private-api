@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  private-api:
+    build: .
+    container_name: private-api
+    env_file:
+      - .env
+    network_mode: host
+    restart: unless-stopped
