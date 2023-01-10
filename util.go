@@ -41,7 +41,10 @@ type Envs struct {
 		SecretID     string `env:"TENCENT_SECRET_ID,notEmpty"`
 		TTSProjectID int64  `env:"TENCENT_TTS_PROJECT_ID,notEmpty"`
 	}
-	Port int64 `env:"PORT" envDefault:"8080"`
+	Port   int64 `env:"PORT" envDefault:"8080"`
+	OpenAI struct {
+		SecretKey string `env:"OpenAI_SECRET_KEY,notEmpty"`
+	}
 }
 
 var GetEnvs = func() func() Envs {

@@ -5,6 +5,8 @@ services:
     build: .
     container_name: private-api
     env_file:
-      - .env
+      - .production.env
+    volumes:
+      - ./.cache:/.cache
     network_mode: host
     restart: unless-stopped

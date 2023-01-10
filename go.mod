@@ -5,6 +5,7 @@ go 1.19
 require github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.576
 
 require (
+	github.com/alevinval/sse v1.0.1 // indirect
 	github.com/bradfitz/gomemcache v0.0.0-20220106215444-fb4bf637b56d // indirect
 	github.com/caarlos0/env/v6 v6.10.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
